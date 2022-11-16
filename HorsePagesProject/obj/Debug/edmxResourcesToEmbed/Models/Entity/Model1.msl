@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HorsePagesModelStoreContainer" CdmEntityContainer="HorsePagesEntities">
+    <EntitySetMapping Name="TBL_bilgiler">
+      <EntityTypeMapping TypeName="HorsePagesModel.TBL_bilgiler">
+        <MappingFragment StoreEntitySet="TBL_bilgiler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Atlar" ColumnName="Atlar" />
+          <ScalarProperty Name="Ozellikler" ColumnName="Ozellikler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

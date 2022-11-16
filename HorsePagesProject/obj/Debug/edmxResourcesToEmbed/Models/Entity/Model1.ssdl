@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HorsePagesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'HorsePages.dbo.TBL_bilgiler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBL_bilgiler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Atlar" Type="varchar" MaxLength="500" />
+    <Property Name="Ozellikler" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityContainer Name="HorsePagesModelStoreContainer">
+    <EntitySet Name="TBL_bilgiler" EntityType="Self.TBL_bilgiler" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TBL_bilgiler].[ID] AS [ID], 
+    [TBL_bilgiler].[Atlar] AS [Atlar], 
+    [TBL_bilgiler].[Ozellikler] AS [Ozellikler]
+    FROM [dbo].[TBL_bilgiler] AS [TBL_bilgiler]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

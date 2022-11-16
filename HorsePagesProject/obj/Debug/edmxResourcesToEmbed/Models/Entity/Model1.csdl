@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HorsePagesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_bilgiler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Atlar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Ozellikler" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HorsePagesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_bilgiler" EntityType="Self.TBL_bilgiler" />
+  </EntityContainer>
+</Schema>
